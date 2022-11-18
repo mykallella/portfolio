@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; 
+}
+
+body {    
+    background-image: url("/img/background.png");
+    background-size: cover; /* Imagem pega todo espaço */
+    background-repeat: no-repeat;
+    background-position: center;   
+    color: #1c1c1c;
+    background-color: rgb(255, 255, 255);
+}
+
+h1, h2, h3 {    
+    color: #000000;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    transition: 0.2s;    
+}
+
+a:hover {    
+    color: rgb(200, 200, 200);
+}
+
+/* Menu (Geral) */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #47475d4c;       
+    transition: 0.3s;
+    padding: 15px 20px;      
+}
+
+/* Menu (Logo) */
+nav > a {
+    text-decoration: none;
+    font-size: 26px;    
+    letter-spacing: 4px;    
+    font-weight: 300;    
+    color: black;   
+}
+
+/* Menu (Lista) */
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+/* Menu (Linhas) */
+nav ul li {     
+    text-align: center;
+    width: 100%;
+}
+
+/* Menu (Links) */
+nav ul li a {
+    display: inline-block; /* Tranforma todos os links em um bloco */
+    padding: 10px 0;    
+    text-decoration: none;    
+}
+
+nav:hover {            
+    background-color: #9780d5;
+    opacity: 0.75;
+}
+
+/* Cabeçalho */
+header {      
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    
+    color: #ffffff;
+    text-align: center;
+    padding: 50px; 
+    font-size: large;  
+}
+
+header h1 {
+    color: #ffffff;
+}
+
+header p {
+    margin-bottom: 2em;
+}
+
+span#my-name { 
+    font-family: 'Michroma', sans-serif;    
+    color: white;  
+    background-color: #7c6aae;
+    box-shadow: 10px 10px 15px 0px #dbc4ff47;
+    border-radius: 5px;
+    padding: 5px 15px;    
+    font-weight: 400;
+}
+
+.header-github {    
+    margin-top: 32px;    
+    height: 200px;
+    width: 200px;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.header-github:hover {    
+    opacity: 0.9;         
+}
+
+#foto img {    
+    height: 50px;
+    width: 50px;    
+    visibility: hidden;
+
+    transition: transform .3s;
+}
+
+#foto img:hover {
+    transform: scale(1.1);
+}
+
+/* Serviços */
+#projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    color: #434343;
+    padding: 30px;    
+}
+
+#projetos .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+
+    position: relative;
+
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: rgba(178, 88, 242, 0.800);
+    padding: 16px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 20px 20px 50px -30px #dbc4ff;
+    height: 315px;
+    width: 315px;    
+}
+
+#projetos .card img {
+    height: 160px;
+    width: 160px;
+}
+
+#projetos .card .acessar {     
+    position: absolute;
+    left: 50%;
+    top: 65%;
+
+    transform: translate(-50%, -50%);
+
+    text-decoration: none;
+    width: 85%;
+    margin-top: 6.5em;
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+    font-size: 0.7em;
+    font-weight: 500;
+    color: white;
+    background: linear-gradient(to right, #fe5f8f, #ffc7d9);    
+}
+
+#tecnologias {    
+    margin: 0em 3em; 
+    margin-bottom: 6em;   
+}
+
+#tecnologias h1 {
+    color: rgb(214, 213, 213);
+    background-color: #47475d4c;
+}
+
+#tecnologias img {
+    margin-top: 2em;
+    height: 8em;
+    width: 8em;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+#tecnologias img:hover {    
+    opacity: 0.9;      
+}
+
+/* Rodapé */
+footer { 
+    text-decoration: none;   
+    text-align: center;
+    padding: 10px;
+    background-color: #47475da7;
+    color: rgb(214, 213, 213); 
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(214, 213, 213);
+}
+
+
+/* Media Query */
+@media screen and (min-width: 768px) {
+
+    /* Menu */
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /* Menu (Logo) */
+    nav > a {    
+        padding-left: 30px;      
+    }
+
+    /* Lista */
+    nav ul {
+        flex-direction: row;
+        width: 70%;
+    }
+
+    /* Menu (Linhas) */
+    nav ul li {    
+        text-align: right;
+        padding-right: 30px;    
+    }
+
+    #apresentacao {        
+        width: 100%;
+        font-size: x-large;
+        text-align: left;
+        padding-left: 20px;                
+    }
+
+    #topo {
+        display: flex;
+        flex-direction: row;        
+    }
+
+    #foto img {
+        visibility: visible; 
+        padding-right: 20px;
+        padding-top: 30px;
+        height: 500px;
+        width: 500px;
+        opacity: 0.99;
+    }
+
+    /* Serviços */
+    #projetos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    #projetos h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    #projetos div.card {
+        flex-grow: 1;
+        flex-basis: 150px;
+        padding: 10px 10px;        
+        
+        margin-left: 32px;
+        height: 315px;
+        width: 315px;         
+    }
+
+}
+
+
+
